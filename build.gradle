@@ -27,10 +27,9 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-test'
     implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.4'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
-    //implementation 'mysql:mysql-connector-java'
-    //compile 'org.postgresql:postgresql'
-    // https://mvnrepository.com/artifact/postgresql/postgresql
-    compile group: 'postgresql', name: 'postgresql'
+    implementation 'mysql:mysql-connector-java'
+    //implementation 'org.postgresql:postgresql'
+    
 
     //providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 }
