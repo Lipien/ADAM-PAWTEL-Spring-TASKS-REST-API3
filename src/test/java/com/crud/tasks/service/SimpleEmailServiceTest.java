@@ -25,11 +25,10 @@ public class SimpleEmailServiceTest {
     @Test
     public void shouldSendEmial() {
         //Given
-        Mail mail = new Mail("test@test.com", "Test", "Test Message", "");
+        Mail mail = new Mail("test@test.com", "Test", "Test Message");
 
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         mailMessage.setTo(mail.getMailTo());
-        mailMessage.setCc(mail.getToCc());
         mailMessage.setSubject(mail.getSubject());
         mailMessage.setText(mail.getMessage());
 
