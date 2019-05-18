@@ -47,5 +47,14 @@ public class SimpleEmailService {
         mailMessage.setText(mail.getMessage());
         return mailMessage;
     }
+
+    private MimeMessagePreparator createMimeMessageForDailyMail(final Mail mail) {
+        return mimeMessage -> {
+            MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage);
+            messageHelper.setTo(mail.getMailTo());
+            messageHelper.setSubject(mail.getSubject());
+            messageHelper.setText(mailCreatorService.buildTasksDailyEmail(mail.getMessage()), true);
+        };
+    }
 }
 
